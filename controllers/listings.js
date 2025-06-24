@@ -68,6 +68,11 @@ module.exports.createListing=async(req,res,next)=>{
      res.redirect("/listings");
  }
 
+ module.exports.renderNewForm=(req,res)=>{
+   res.render("listings/new.ejs");
+    
+}
+
  module.exports.renderEditForm=async(req,res)=>{
     let {id}=req.params;
     let listing =await Listing.findById(id);
