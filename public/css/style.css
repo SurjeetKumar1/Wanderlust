@@ -1,0 +1,245 @@
+body{
+    background-color: rgb(172, 245, 179);
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    /* this is style for our footer always in botoom */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+  /* this is style for our foter always in botoom */
+.container{
+    flex: 1;
+}
+.navbar{
+  height: 5rem;
+  background-color: white;
+}
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link{
+    color: #222222 !important;
+}
+
+ /* footer */
+.f-info-links a{
+    text-decoration: none;
+    color: #222222;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: #222222;
+}
+
+.f-info-links,.f-info-socials,.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+.f-info{
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* cards */
+.listing-card{
+border: none !important;
+margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+
+.card-body{
+    padding: 0 !important;
+}
+.card-text p{
+    font-weight: 400 !important;
+}
+.listing-links{
+    text-decoration: none;
+}
+
+/* card effect */
+
+.card-img-overlay{
+    opacity: 0;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2;
+    background-color: white;
+}
+
+/* new page */
+.add-btn,.edit-btn{
+    background-color:#fe424d !important;
+    border: none !important;
+}
+/* edit button */
+.edit-btn{
+    background-color:#fe424d !important;
+    border: none !important;
+}
+/* show page */
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* map style */
+/* body { margin: 0; padding: 0; } */
+#map { 
+height: 400px;
+width: 80vh;
+}
+
+/* index filter style */
+/* Wrapper around the whole filter bar */
+.filter-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+/* Filter scroll area */
+#filter-scroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  flex-grow: 1;
+  scrollbar-width: none;
+}
+
+#filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Each filter tab */
+.filter {
+  flex: 0 0 auto;
+  text-align: center;
+  opacity: 0.7;
+  min-width: 80px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.filter:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.filter p {
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 0.4rem 0.6rem;
+  cursor: pointer;
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.scroll-btn.left {
+  margin-right: 0.5rem;
+}
+
+.scroll-btn.right {
+  margin-left: 0.5rem;
+}
+
+/* Toggle button */
+.text-toggle {
+  border: 1px solid black;
+  border-radius: 1rem;
+  height: 3.2rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* 📱 For small screens (phones) */
+@media (max-width: 768px) {
+  .filter-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  #filter-scroll {
+    gap: 0.75rem;
+  }
+
+  .scroll-btn {
+    display: none;
+  }
+
+  .leftBtn{
+    display: none;
+  }
+
+  .text-toggle {
+    height: 2.4rem;
+    padding: 0.5rem 0.75rem;
+    margin-left: 0;
+    font-size: 0.8rem;
+    justify-content: center;
+  }
+
+  .form-check-label {
+    font-size: 0.75rem;
+  }
+
+  .form-check-input {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 576px) {
+  .scroll-btn {
+    display: none;
+  }
+  .leftBtn{
+    display: none;
+  }
+}
+
+#filter-scroll {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* ensures smooth swipe on iOS */
+}
