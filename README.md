@@ -212,6 +212,15 @@ After pushing a change to the `main` branch, the GitHub Action will automaticall
   <img src="https://github.com/SurjeetKumar1/Wanderlust/blob/main/public/assets/signup.png" alt="Sign Up Page" width="48%"/>
   <img src="https://github.com/SurjeetKumar1/Wanderlust/blob/main/public/assets/map.png" alt="Map View" width="48%"/>
 </p>
+<br>
+<br>
+
+<p align="center">
+  <img src="https://github.com/SurjeetKumar1/Wanderlust/blob/main/public/assets/individual-listing.png" alt="Sign Up Page" width="48%"/>
+  <img src="https://github.com/SurjeetKumar1/Wanderlust/blob/main/public/assets/new-listings.png" alt="Map View" width="48%"/>
+</p>
+
+
 
 ---
 
