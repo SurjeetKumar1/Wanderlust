@@ -64,8 +64,8 @@ First, create and configure the cloud server.
     -   `HTTP` (Port 80) from `Anywhere` (0.0.0.0/0).
     -   `Custom TCP` (Port 8080) from `Anywhere` (0.0.0.0/0).
 4.  **Connect and Prepare:**
-    -   Secure your key: `chmod 400 "your-key.pem"`
-    -   SSH into your instance: `ssh -i "your-key.pem" ubuntu@your-ec2-dns.com`
+    -   Secure your key: `   chmod 400 "wanderlust-key.pem""`
+    -   SSH into your instance: `ssh -i "wanderlust-key.pem" ubuntu@ec2-100-26-197-29.compute-1.amazonaws.com`
     -   Install necessary software:
         ```bash
         sudo apt update
@@ -93,12 +93,13 @@ Connect your EC2 instance to your GitHub repository.
 
     ```bash
     # Download
-    mkdir actions-runner && cd actions-runner
-    curl -o actions-runner-linux-x64.tar.gz -L "URL_FROM_GITHUB"
-    tar xzf ./actions-runner-linux-x64.tar.gz
-
+    mkdir backend-runner && cd backend-runner
+      curl -o actions-runner-linux-x64-2.328.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.328.0/actions-runner-linux-x64-2.328.0.tar.gz
+      echo "01066fad3a2893e63e6ca880ae3a1fad5bf9329d60e77ee15f2b97c148c3cd4e  actions-runner-linux-x64-2.328.0.tar.gz" | shasum -a 256 -c
+      tar xzf ./actions-runner-linux-x64-2.328.0.tar.gz
+    
     # Configure
-    ./config.sh --url "REPO_URL" --token "YOUR_TOKEN"
+    ./config.sh --url https://github.com/SurjeetKumar1/Wanderlust --token <...........>
 
     # Install and start the service
     sudo ./svc.sh install
@@ -205,7 +206,7 @@ Make your application accessible on port 80.
 
 After pushing a change to the `main` branch, the GitHub Action will automatically trigger. You can verify a successful deployment by accessing your EC2 instance's public IP address or domain name in a browser.
 
-**Example Endpoint:** `http://your-ec2-public-dns.com/listings`
+**Example Endpoint:** `http://ec2-100-26-197-29.compute-1.amazonaws.com/listings`
 
 <p align="center">
   <img src="https://github.com/SurjeetKumar1/Wanderlust/blob/main/public/assets/signup.png" alt="Sign Up Page" width="48%"/>
